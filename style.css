@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,800&family=Source+Sans+Pro:wght@400;900&display=swap');
+
+  * 
+  {
+      padding: 0;
+      margin: 0;
+  }
+
+  html, body
+  {
+      font-family: 'Pretendard', sans-serif !important;
+  }
+
+  .space
+  {
+      height: 300px;
+  }
+
+  .inner{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+  }
+  .tit_text{font-size: 40px; color: #a87e6e; font-weight: 700;}
+
+  .goto_btn{
+      display: flex;
+      max-width: 180px;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 10px;
+      border-bottom: 2px solid #a87e6e;
+      color: #a87262;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+  .goto_btn i { margin-left: 50px; transition: all 0.3s;}
+  .goto_btn:hover i.fa-arrow-right-long{transform: translateX(50%); transition: all 0.2s linear;}
+  a { text-decoration: none;}
+
+  /* container1 */
+  .service_container .move_box_container .service_box_wrap .service_tag {
+    position: absolute; 
+    width: 100%; 
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    font-size: 0.8vw;
+    font-weight: 700; 
+    text-align: center; 
+  }
+
+  .service_container
+  {
+    height: auto;
+    overflow: hidden;
+    position: relative;
+
+  }
+  .service_container .move_box_container .service_box_wrap
+  {
+    display: flex;
+    width: auto;
+    justify-content: center;
+  }
+  .service_box_wrap .service_box:hover
+  {
+    transform: translateY(-5%);
+  }
+
+  .service_container .service_box
+  {
+    position: relative;
+    display: block;
+    width: 13vw; 
+    height: 13vw; 
+    background-color: #f4efec;
+    border-radius: 1.5vw;
+    overflow: hidden;
+    transition: all 0.3s;
+    margin: 0 0.8vw;
+  }
+  .service_container .service_box img
+  {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .service_container .move_box_container .move_box {
+    display: flex; width: 100%;
+    position: relative;
+    top: 0;
+    right: 0;
+    overflow:hidden; 
+    white-space: nowrap;
+  }
+  .service_box_wrap
+  {
+    display: flex;
+    position: relative;
+    animation: bannermove 80s linear infinite;
+    justify-content: space-around;
+  }
+  
+  
+  @keyframes bannermove {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  #component1
+  {padding-top: 1.5vw;}
+  #component2
+  {padding-top: 1.5vw;}
+
+  /* container2 */
+  .service_container .move_box_container .service_box_wrap2 .service_tag {
+    position: absolute; 
+    width: 100%; left: 50%; bottom: 30px; transform: translateX(-50%);
+    font-size: 0.8vw; font-weight: 700; text-align: center; 
+  }
+
+  .service_container .move_box_container .move_box2 {
+    display: flex; width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow:hidden; 
+    white-space: nowrap;
+  }
+
+  .service_box_wrap2
+  {
+    display: flex;
+    position: relative;
+    animation: bannermove-reverse 80s linear infinite;
+    justify-content: space-around;
+  }
+
+  .service_box_wrap2 .service_box:hover
+  {
+    transform: translateY(-5%);
+  }
+
+  @keyframes bannermove-reverse {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+  }
+
+  /* mediaQuery 조작 */
+  @media screen and (max-width: 768px) {
+    .inner {margin: 0 15px 40px;}
+    .tit_text {font-size: 22px;}
+
+    /* 768 이미지 */
+    .service_container .service_box
+    {
+      width: 40vw;
+      height: 40vw;
+      border-radius: 3.5vw;
+    }
+    /* 768 텍스트 */
+    .service_container .move_box_container .service_box_wrap .service_tag 
+    {
+      font-size: 2vw;
+    }
+    .service_container .move_box_container .service_box_wrap2 .service_tag
+    {
+      font-size: 2vw;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .inner {margin: 0 40px 40px;}
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    .tit_text {font-size: 36px;}
+  }
+  
+  @media screen and (min-width: 1200px) {
+
+  }
+
+
+/*
+background-color: #a87e6e;
+background-color: #ac867b;
+background-color: #f7ccb7;
+background-color: #EDCCC1;
+background-color: #FACDB8;
+background-color: #f4efec; 
+*/
